@@ -4,12 +4,12 @@
 </template>
 
 <script lang="ts">
-  import '@/main.scss'
-  import {defineComponent} from "vue";
-  import TodoApp from "@/containers/TodoApp/TodoApp.vue";
+  import '@/main.scss';
+  import {defineComponent} from 'vue';
+  import TodoApp from '@/containers/TodoApp/TodoApp.vue';
 
   export default defineComponent({
-    name: "App",
+    name: 'App',
     components: {TodoApp},
   });
 </script>

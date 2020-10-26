@@ -12,12 +12,12 @@ li.todoItem(:class="{'--done': model.done, '--isEdit': editId === model.id }")
 </template>
 
 <script lang="ts">
-  import './Todos.scss'
-  import BaseButton from "@/components/BaseButton/BaseButton.vue";
-  import {nextTick, ref, defineComponent} from "vue";
+  import './Todo.scss';
+  import BaseButton from '@/components/BaseButton/BaseButton.vue';
+  import {nextTick, ref, defineComponent} from 'vue';
 
   export default defineComponent({
-    name: "Todos",
+    name: 'Todo',
     components: {BaseButton},
     props: {
       model: {

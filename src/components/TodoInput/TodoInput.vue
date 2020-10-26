@@ -5,12 +5,12 @@
 </template>
 
 <script lang="ts">
-  import '@/components/TodoInput/TodoInput.scss'
-  import BaseButton from "@/components/BaseButton/BaseButton.vue";
-  import {ref, defineComponent} from "vue";
+  import '@/components/TodoInput/TodoInput.scss';
+  import BaseButton from '@/components/BaseButton/BaseButton.vue';
+  import {ref, defineComponent} from 'vue';
 
   export default defineComponent({
-    name: "TodoInput",
+    name: 'TodoInput',
     components: {BaseButton},
     setup(props, {emit}) {
       const title = ref<string>('');

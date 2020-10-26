@@ -1,5 +1,5 @@
 import {reactive, provide, inject} from 'vue';
-import {ITodoItem} from "@/types";
+import {ITodoItem} from '@/types';
 
 export class State {
   public todoList: Array<ITodoItem> = ([{id: '0', title: 'create vue3 toto app', done: true}]);
@@ -14,24 +14,24 @@ export class State {
   }
 
   removeTodo(id: string) {
-    this.todoList = this.todoList.filter((ell: ITodoItem) => ell.id !== id);
+    this.todoList = this.todoList.filter((todo: ITodoItem) => todo.id !== id);
   }
 
   doneTodo(id: string) {
-    this.todoList.map((ell: ITodoItem) => {
-      if (ell.id === id) {
-        ell.done = !ell.done;
+    this.todoList.map((todo: ITodoItem) => {
+      if (todo.id === id) {
+        todo.done = !todo.done;
       }
-      return ell;
+      return todo;
     });
   }
 
   completeEdit(title: string, id: string) {
-    this.todoList.map((ell: ITodoItem) => {
-      if (ell.id === id) {
-        ell.title = title;
+    this.todoList.map((todo: ITodoItem) => {
+      if (todo.id === id) {
+        todo.title = title;
       }
-      return ell;
+      return todo;
     });
     this.editTodoId('none');
   }
@@ -46,8 +46,8 @@ export const createState = () => {
   return reactive(new State());
 }
 
-export const useState = () => inject(stateSymbol) as State
+export const useState = () => inject(stateSymbol) as State;
 export const provideState = () => provide(
   stateSymbol,
   createState()
-)
+);

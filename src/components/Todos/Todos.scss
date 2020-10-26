@@ -1,0 +1,51 @@
+.todoItem {
+  display: block;
+  width: 428px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, .125);
+  padding: 8px 10px;
+  text-align: left;
+  transition: all 0.8s ease;
+  margin: 8px 0;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__title {
+    margin: 0 10px;
+    transition: all 0.4s ease;
+
+    .todoItem.--isEdit & {
+      display: none;
+    }
+
+    .todoItem.--done & {
+      text-decoration: line-through;
+      color: #d7d7dc;
+    }
+  }
+
+  &__input {
+    display: none;
+    border: 0;
+    border-bottom: 1px solid;
+    border-radius: 0;
+    padding: 0;
+
+    &:focus {
+      border: 0;
+      border-bottom: 1px solid;
+      border-radius: 0;
+    }
+
+    .todoItem.--isEdit & {
+      display: inline-block;
+      padding-left: 3px;
+    }
+  }
+
+  &__buttonOver {
+    float: right;
+  }
+}

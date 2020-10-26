@@ -1,0 +1,14 @@
+.todoApp {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  &-enter-from, &-leave-to {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  &-leave-active {
+    position: absolute;
+  }
+}

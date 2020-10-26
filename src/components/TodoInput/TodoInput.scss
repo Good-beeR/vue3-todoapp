@@ -1,0 +1,18 @@
+.todoInput {
+  margin-bottom: 10px;
+
+  &__input {
+    color: #495057;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 2px;
+    padding: 8px 12px;
+    margin-right: 10px;
+    min-width: 320px;
+    outline: none;
+
+    &:focus {
+      border: 1px solid #666;
+    }
+  }
+}

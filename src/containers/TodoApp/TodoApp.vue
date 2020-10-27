@@ -1,12 +1,12 @@
 <template lang="pug">
 TodoInput(@onAddTodo="addTodo")
 transition-group(name="todoApp" class="todoApp" tag="ul")
-  Todo(v-for="item in state.todoList"
-    @onRemove="removeTodo(item.id)" @onDone="doneTodo(item.id)" @editTodoId="editTodoId(item.id)"
+  Todo(v-for="todo in state.todoList"
+    @onRemove="removeTodo(todo.id)" @onDone="doneTodo(todo.id)" @editTodoId="editTodoId(todo.id)"
     @onCompleteEdit="completeEdit"
-    :key="item.id"
-    :model="item"
-    :editId="state.editId")
+    :key="todo.id"
+    :todo="todo"
+    :editableId="state.editableId")
   .todoItem(v-if="state.todoList.length === 0") No more tasks, you can rest :)
 </template>
 

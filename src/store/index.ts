@@ -3,7 +3,7 @@ import {ITodoItem} from '@/types';
 
 export class State {
   public todoList: Array<ITodoItem> = ([{id: '0', title: 'create vue3 toto app', done: true}]);
-  public editId = '';
+  public editableId = '';
 
   addTodo(title: string) {
     this.todoList = [...this.todoList, {
@@ -37,7 +37,7 @@ export class State {
   }
 
   editTodoId(id: string) {
-    this.editId = id;
+    this.editableId = id;
   }
 }
 

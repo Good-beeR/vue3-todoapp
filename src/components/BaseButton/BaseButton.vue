@@ -9,9 +9,7 @@ button.baseButton(@click="$emit('button-click')") {{ title }}
   export default defineComponent({
     name: 'BaseButton',
     props: {
-      title: {
-        default: ''
-      }
+      title: String,
     }
   });
 </script>

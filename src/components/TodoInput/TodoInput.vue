@@ -14,7 +14,6 @@
     components: {BaseButton},
     setup(props, {emit}) {
       const title = ref<string>('');
-
       const onAddTodo = (): void => {
         if (title.value.trim() !== '') {
           emit('on-add-todo', title.value);
